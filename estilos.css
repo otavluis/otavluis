@@ -13,6 +13,7 @@
 
 body{
     font-family: 'Exo', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -24,10 +25,11 @@ body{
 }
 
 .myl{
+    left: 0.8em;%;
     z-index: 10;
     display: flex;
     justify-content: center;
-    margin: -390px 0 0  -25px;
+    margin: -360px 0 0  -25px;
     overflow:visible;
     position: relative;
 }
@@ -171,13 +173,7 @@ img{
     }
 
 }
-body {
-  
-  font-family: "Montserrat", sans-serif;
-}
-nav ul {
-    list-style: none; /* Adicionamos esta linha para remover o marcador da lista */
-  }
+
 
 .navMenu {
   position: absolute;
@@ -200,49 +196,22 @@ nav ul {
 }
 
 .navMenu a:hover {
-  color: #ffd000;
-}
-
-.navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: #ffd000;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(110px);
-  transform: translateX(110px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(200px);
-  transform: translateX(200px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-.navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(285px);
-  transform: translateX(285px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
+    color: #ffd000;
+  }
+  
+  .navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: #ffd000;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:hover + .dot,
+  .navMenu .active + .dot {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
